@@ -2,7 +2,6 @@
 
 This repository contains materials for the **Operating Systems** course, a third-year offering within the **BSc in Computer, Communication and Electronic Engineering** program at **UNITN**. It covers fundamental concepts, advanced topics, and practical examples related to how operating systems function and manage computer resources.
 
----
 
 ## Contents Summary
 
