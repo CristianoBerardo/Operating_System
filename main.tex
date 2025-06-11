@@ -1,0 +1,207 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{caption}
+
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{{img/}}
+\usepackage[a4paper,top=2cm,bottom=2.5cm,left=2.5cm,right=2.5cm,marginparwidth=0cm]{geometry}
+
+%link in latex
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Operating_System_Appunti_Berardo_Cristiano},
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+\usepackage{afterpage}
+\usepackage[T1]{fontenc} % codifica dei font
+\usepackage[utf8]{inputenc} % lettere accentate da tastiera
+\usepackage[english]{babel} % lingua del documento
+\usepackage{url} 
+\usepackage{quoting}
+\usepackage{xspace}% per lo spazio intelligente
+\usepackage{titlesec} % per formato custom dei titoli dei capitoli
+\usepackage{tcolorbox}%per i box
+
+\usepackage{float}
+\usepackage{sidecap}
+\usepackage{amsmath}
+\usepackage{pgfplots}   % per i grafici
+\pgfplotsset{width=7cm,compat=1.9}
+\usepackage{booktabs}
+\usepackage{amssymb}
+
+\usepackage{circuitikz}
+
+
+\usepackage[T1]{fontenc}
+
+
+
+
+
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{RGB}{247, 246, 243}
+\definecolor{my_yellow}{RGB}{178, 173, 85}
+
+
+% \lstdefinestyle{mystyle}{
+%     backgroundcolor=\color{backcolour},   
+%     commentstyle=\color{codegreen},
+%     keywordstyle=\color{magenta},
+%     numberstyle=\tiny\color{codegray},
+%     stringstyle=\color{codepurple},
+%     basicstyle=\ttfamily\footnotesize,
+%     breakatwhitespace=false,         
+%     breaklines=true,                 
+%     captionpos=b,                    
+%     keepspaces=true,                 
+%     numbers=left,                    
+%     numbersep=5pt,                  
+%     showspaces=false,                
+%     showstringspaces=false,
+%     showtabs=false,                  
+%     tabsize=2
+% }
+
+\usepackage{color}
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+
+
+% ------------- CODE IN JAVA ---------------------
+\lstdefinestyle{style1}{
+    language=Java,
+    numberstyle=\tiny\color{codegray},
+    numbers=left,
+    backgroundcolor=\color{backcolour},   
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    commentstyle=\color{pgreen},
+    keywordstyle=\color{pblue},
+    stringstyle=\color{pred},
+    basicstyle=\ttfamily,
+    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+\lstdefinestyle{codeinjava}{
+    style=style1,
+}
+\lstnewenvironment{codeInJava}{
+    \lstset{
+        style=codeinjava,
+    }
+}{}
+
+% ------------- END CODE IN JAVA ---------------------
+
+% ------------- START CODE IN C/C++ ---------------------
+
+\lstdefinestyle{style2}{
+    numbers=left,
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    xleftmargin=\parindent,
+    language=C,
+    % identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{pblue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstdefinestyle{codeinc}{
+    style=style2,
+}
+
+\lstnewenvironment{codeInC}{
+    \lstset{
+        style=codeinc,        
+    }
+}{}
+
+\lstdefinestyle{style3}{
+  belowcaptionskip=1\baselineskip,
+  frame=L,
+  xleftmargin=\parindent,
+  language=[x86masm]Assembler,
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\itshape\color{purple!40!black},
+}
+
+% ------------- END CODE IN C/C++ ---------------------
+
+
+%\lstset{style=mystyle}
+
+
+
+
+
+
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\begin{document}
+
+\input{pagina_iniziale}
+\afterpage{\blankpage}
+
+
+\tableofcontents
+
+\clearpage
+
+
+\input{introduction}
+\input{OS_structure_2}
+\input{Processi}
+\newpage
+\input{thread_and_concurrency}
+
+\input{Cpu_scheduling}
+
+\input{Sync_tools}
+\input{posix}
+\input{deadlock}
+
+\input{Main_memory}
+
+\input{More_on_virtual_mem}
+
+
+\end{document}
+
